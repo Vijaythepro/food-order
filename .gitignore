@@ -3,3 +3,4 @@ node_modules
 #dist and parcel-cache is basically a build folders, which we can generate in the server
 dist
 .parcel-cache
+package-lock.json
