@@ -29,9 +29,6 @@ body {
     list-style: none;
 }
 
-.body-container {
-    background-color: #F6F6F6;
-}
 
 li {
     display: flex;
@@ -39,14 +36,11 @@ li {
     gap: 3px;
 }
 
-.card {
+.restaurant-card {
     border-radius: 10px;
-    color: #F6F6F6;
     position: relative;
-    margin: 15px 35px;
- 
-    display: flex;
-    width: 374px;
+    margin: 15px 25px;
+    width: 175px;
 }
 
 img {
@@ -59,10 +53,11 @@ img {
     z-index: 2;
 } */
 
-.food-info {
+.food-offer {
     position: absolute;
-    left: 10px;
-    bottom: 15px;
+    bottom: 0px;
+    left: 15px;
+    color: #F6F6F6
 }
 
 .order-btn {
@@ -71,7 +66,7 @@ img {
     font-weight: 800;
 }
 
-.card:hover {
+.restaurant-card:hover {
      /*   border: 1px solid black;
  width: 385px; */
     cursor: pointer;
@@ -81,4 +76,16 @@ img {
     display: inline-flex;
     flex-wrap: wrap;
     margin: 0px 50px;
+}
+
+.food-img {
+    position: relative;
+}
+
+.restaurant-subtext-container {
+    margin-left: 15px;
+
+    .subtext-description {
+        margin: 0px;
+    }
 }
