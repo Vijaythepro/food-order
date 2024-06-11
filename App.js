@@ -1859,23 +1859,23 @@ const resList =  {
 } 
 
 const CardComponent = (props) => {
-  const resCard= props.resCard;
-  const imageId = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resCard.info?.cloudinaryImageId;
-  console.log(imageId);
+  const resCardData= props.resCard.info;
+
+  const imageId = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resCardData?.cloudinaryImageId;
   return (
     <div className="restaurant-card">
        <div className="food-img">
         <img style={{position: "relative"}} src={imageId}></img>
         {
-          resCard.info.aggregatedDiscountInfoV3?.header &&
-            <h2 className="food-offer" >{resCard.info.aggregatedDiscountInfoV3.header+" "+resCard.info.aggregatedDiscountInfoV3.subHeader}</h2>
+         resCardData.aggregatedDiscountInfoV3?.header &&
+            <h2 className="food-offer" >{resCardData.aggregatedDiscountInfoV3.header+" "+resCardData.aggregatedDiscountInfoV3.subHeader}</h2>
         }
       </div>
       <div className="restaurant-subtext-container">
-       <h4 className="subtext-description">{resCard.info.name}</h4>
-       <h4 className="subtext-description">{resCard.info.avgRating +"."+ resCard.info.sla.slaString}</h4>
-       <p className="subtext-description">{resCard.info.cuisines.join(", ")}</p>
-       <p className="subtext-description">{resCard.info.areaName}</p>
+       <h4 className="subtext-description">{resCardData.name}</h4>
+       <h4 className="subtext-description">{resCardData.avgRating +"."+ resCardData.sla.slaString}</h4>
+       <p className="subtext-description">{resCardData.cuisines.join(", ")}</p>
+       <p className="subtext-description">{resCardData.areaName}</p>
        </div>
     </div>
   );
